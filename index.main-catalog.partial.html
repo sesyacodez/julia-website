@@ -1,32 +1,67 @@
-<section class = "catalog">
-    <div class = "catalog__headers">
-        <h2 class = "catalog__header">Fresh Angle on Familiar Things</h2>
-        <p class = "catalog__subheader">Creative approach is my signature</p>
+<section class="catalog">
+  <div class="catalog__headers">
+    <h2 class="catalog__title">Fresh Angle on Familiar Things</h2>
+    <p class="catalog__subtitle">Creative approach is my signature</p>
+  </div>
+
+  <section class="catalog__carousel">
+    <input
+      type="radio"
+      name="catalog-carousel"
+      id="catalog-carousel-slide-1"
+      checked
+      class="catalog__carousel-radio"
+    />
+    <input
+      type="radio"
+      name="catalog-carousel"
+      id="catalog-carousel-slide-2"
+      class="catalog__carousel-radio"
+    />
+    <input
+      type="radio"
+      name="catalog-carousel"
+      id="catalog-carousel-slide-3"
+      class="catalog__carousel-radio"
+    />
+
+    <div class="catalog__carousel-track">
+      <div class="catalog__carousel-slide">
+        <img
+          src="https://as1.ftcdn.net/v2/jpg/08/53/99/44/1000_F_853994471_cyk7mzmGRJESm6qVpRdBzWHFcSZ3tNvl.jpg"
+          alt="Hydrangea bouquet watercolor flowers"
+          class="catalog__carousel-image"
+        />
+      </div>
+      <div class="catalog__carousel-slide">
+        <img
+          src="https://as2.ftcdn.net/v2/jpg/05/30/38/13/1000_F_530381337_02VD3KwvFocwMYQdQLdwzdsktra6U0Rq.jpg"
+          alt="Watercolor floral frame design"
+          class="catalog__carousel-image"
+        />
+      </div>
+      <div class="catalog__carousel-slide">
+        <img
+          src="https://as2.ftcdn.net/v2/jpg/10/30/32/35/1000_F_1030323584_KHMGysw9DDx2k8VJZRoVM8V717H6XtIs.jpg"
+          alt="Pink water pattern seamless texture"
+          class="catalog__carousel-image"
+        />
+      </div>
     </div>
-    <div class = "catalog__accordion">
-        <details class="catalog__accordion-item">
-            <summary class = "catalog__accordion-summary">Watercolor Abstract</summary>
-            <div class = "catalog__accordion-content">
-                <img class="catalog__accordion-image" src = "https://t3.ftcdn.net/jpg/04/23/58/22/240_F_423582212_QjymENOVhVPiuw4sKLcHFDwADyqQjA30.jpg">
-            </div>
-        </details>
-        <details class="catalog__accordion-item">
-            <summary class = "catalog__accordion-summary">Jellyfish</summary>
-            <div class = "catalog__accordion-content">
-                <img class="catalog__accordion-image" src = "https://as2.ftcdn.net/v2/jpg/03/29/81/95/1000_F_329819519_aw50gvN22lhMuu8bzqzQyRj7V3tlaUK0.jpg">
-            </div>
-        </details>
-        <details class="catalog__accordion-item">
-            <summary class = "catalog__accordion-summary">Watercolor Space Flowers</summary>
-            <div class = "catalog__accordion-content">
-                <img class="catalog__accordion-image" src = "https://as2.ftcdn.net/v2/jpg/05/30/38/13/1000_F_530381337_02VD3KwvFocwMYQdQLdwzdsktra6U0Rq.jpg">
-            </div>
-        </details>
-        <details class="catalog__accordion-item">
-            <summary class = "catalog__accordion-summary">Blue Hydrangea</summary>
-            <div class = "catalog__accordion-content">
-                <img class="catalog__accordion-image" src = "https://as1.ftcdn.net/v2/jpg/08/53/99/44/1000_F_853994471_cyk7mzmGRJESm6qVpRdBzWHFcSZ3tNvl.jpg">
-            </div>
-        </details>
+
+    <div class="catalog__carousel-nav">
+      <label
+        for="catalog-carousel-slide-1"
+        class="catalog__carousel-dot"
+      ></label>
+      <label
+        for="catalog-carousel-slide-2"
+        class="catalog__carousel-dot"
+      ></label>
+      <label
+        for="catalog-carousel-slide-3"
+        class="catalog__carousel-dot"
+      ></label>
     </div>
+  </section>
 </section>
