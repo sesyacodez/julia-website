@@ -6,14 +6,17 @@
   --text-color: #858585;
   --accent-color: #557d5f;
   --background-color: #f7f7f5;
-
-  --dark-heading-color: #ffffff;
-  --dark-text-color: #bababa;
-  --dark-accent-color: #c09a64;
-  --dark-background-color: #101010;
 }
 
-h1, h2 {
+.dark-mode {
+  --heading-color: #ffffff;
+  --text-color: #bababa;
+  --accent-color: #c09a64;
+  --background-color: #101010;
+}
+
+h1,
+h2 {
   font-family: "Playfair Display", serif;
 }
 
