@@ -1,0 +1,19 @@
+.introduction {
+    .introduction__subtitle {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--accent-color);
+    }
+
+    .introduction__title {
+        font-size: 58px;
+        font-weight: 700;
+        color: var(--heading-color);
+    }
+
+    .introduction__description {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--text-color);
+    }
+}
