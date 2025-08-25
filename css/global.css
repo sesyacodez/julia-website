@@ -5,12 +5,12 @@
   --heading-color: #2b2b2b;
   --text-color: #858585;
   --accent-color: #557d5f;
-  --background-color: #f0eae4;
+  --background-color: #f7f7f5;
 
-  --dark-heading-color: #eaeaea;
-  --dark-text-color: #bfbfbf;
-  --dark-accent-color: #7dd79a;
-  --dark-background-color: #1a1a1a;
+  --dark-heading-color: #ffffff;
+  --dark-text-color: #bababa;
+  --dark-accent-color: #c09a64;
+  --dark-background-color: #101010;
 }
 
 h1, h2 {
