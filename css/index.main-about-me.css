@@ -1,0 +1,50 @@
+.about-me {
+  background-color: var(--background-color);
+  display: grid;
+  gap: 20px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  @media (min-width: 894px) {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    .introduction__text-container {
+      margin-bottom: 0px;
+    }
+  }
+
+  .about-me__text {
+    background-color: var(--accent-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+
+    .about-me__title {
+      text-align: center;
+      font-size: 50px;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    .about-me__subtitle {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-color);
+      padding-right: 20px;
+      padding-left: 20px;
+      letter-spacing: 1.4px;
+    }
+
+    .about-me__paragraph {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text-color);
+      padding-left: 20px;
+      padding-right: 20px;
+      line-height: 28.9px;
+    }
+  }
+}

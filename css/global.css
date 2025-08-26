@@ -3,9 +3,10 @@
 
 :root {
   --heading-color: #2b2b2b;
-  --text-color: #858585;
+  --text-color: #5a5a5a;
   --accent-color: #557d5f;
   --background-color: #f7f7f5;
+  --accent-background-color: #e8e8e8;
 }
 
 .dark-mode {
@@ -13,6 +14,7 @@
   --text-color: #bababa;
   --accent-color: #c09a64;
   --background-color: #101010;
+  --accent-background-color: #1c1c1c;
 }
 
 h1,
