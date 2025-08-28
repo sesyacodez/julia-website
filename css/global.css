@@ -54,3 +54,12 @@ img {
 body {
   background-color: var(--background-color);
 }
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
