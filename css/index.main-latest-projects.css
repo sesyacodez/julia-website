@@ -38,6 +38,12 @@
     object-fit: cover; /* crop nicely instead of squishing */
     margin: 0 auto; /* center horizontally */
   }
+
+  @media (min-width: 894px) {
+    .carousel-item img {
+      height: 900px;
+    }
+  }
   #latest-projects__carousel__caption .carousel-caption p {
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
