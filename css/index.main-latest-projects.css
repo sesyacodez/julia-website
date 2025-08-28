@@ -1,0 +1,48 @@
+.latest-projects {
+  .latest-projects__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 15px;
+    .latest-projects__title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+    @media (min-width: 420px) {
+      .introduction__title {
+        font-size: 45px;
+      }
+    }
+    @media (min-width: 520px) {
+      .introduction__title {
+        font-size: 50px;
+      }
+    }
+    .latest-projects__subtitle {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-color);
+      letter-spacing: 1.4px;
+    }
+  }
+
+  /*BOOTSTRAP CAROUSEL*/
+  .carousel-item img {
+    width: 1000px; /* force width */
+    height: 600px; /* force height */
+    object-fit: cover; /* crop nicely instead of squishing */
+    margin: 0 auto; /* center horizontally */
+  }
+  #latest-projects__carousel__caption .carousel-caption p {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+}

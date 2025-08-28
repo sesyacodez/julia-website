@@ -1,60 +1,99 @@
-<section class="latest-projects" id="latest-projects">
-  <div class="latest-projects__carousel">
-    <div class="latest-projects__carousel__track-container">
-      <ul class="latest-projects__carousel__track">
-        <li class="latest-projects__carousel__slide">
-          <img
-            src="https://as2.ftcdn.net/v2/jpg/03/27/78/15/1000_F_327781541_usK1Rp2YxpABuuh2SKjGysUZDO9Dxx5h.jpg"
-            alt="Abstract seamless pattern. Marble colorful art background texture."
-            class="latest-projects__carousel__image"
-          />
-        </li>
-        <li class="latest-projects__carousel__slide">
-          <img
-            src="https://as1.ftcdn.net/v2/jpg/04/82/64/62/1000_F_482646280_aMyi85E8iKA75LXECnIhuu97WpVJQfwL.jpg"
-            alt="Universe futuristic background or poster, space abstract illustration, gradient, colorful, modern fantastic future design art card, escapism, cyberpunk"
-            class="latest-projects__carousel__image"
-          />
-        </li>
-        <li class="latest-projects__carousel__slide">
-          <img
-            src="https://as1.ftcdn.net/v2/jpg/03/26/50/10/1000_F_326501066_cWo0LYjDoITH3TyRPDjI9L9VXPbsHQ2j.jpg"
-            alt="Pattern seamless jellyfishes Space colorful repeat texture wallpaper illustration Night galaxy mix with watercolor jelly fishes in bright style vivid blue purple violet isolated on dark background"
-            class="latest-projects__carousel__image"
-          />
-        </li>
-      </ul>
-    </div>
-
-    <button
-      class="latest-projects__carousel__button latest-projects__carousel__button--left"
-      type="button"
+<section class="latest-projects container" id="latest-projects">
+  <div class="latest-projects__text">
+    <h2 class="latest-projects__title">Latest Works</h2>
+    <svg
+      class="about-me__divider"
+      xmlns="http://www.w3.org/2000/svg"
+      width="3000"
+      height="31"
+      style="width: 8%"
     >
-      ←
-    </button>
-    <button
-      class="latest-projects__carousel__button latest-projects__carousel__button--right"
-      type="button"
-    >
-      →
-    </button>
+      <path
+        d="M0 15.5 L3000 15.5"
+        stroke="var(--text-color)"
+        stroke-width="1"
+        fill="none"
+      ></path>
+    </svg>
+    <p class="latest-projects__subtitle">
+      RYAN'S PASSION IS PHOTOSHOOTS FOR LOOKBOOKS AND COMMERCIALS.
+    </p>
+  </div>
 
-    <div class="latest-projects__carousel__nav">
+  <!--BOOTSTRAP CAROUSEL-->
+
+  <div id="latest-projects__carousel__caption" class="carousel slide">
+    <div class="carousel-indicators">
       <button
-        class="latest-projects__carousel__indicator latest-projects__carousel__indicator--active"
         type="button"
-        data-slide-to="0"
+        data-bs-target="#latest-projects__carousel__caption"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
       ></button>
       <button
-        class="latest-projects__carousel__indicator"
         type="button"
-        data-slide-to="1"
+        data-bs-target="#latest-projects__carousel__caption"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
       ></button>
       <button
-        class="latest-projects__carousel__indicator"
         type="button"
-        data-slide-to="2"
+        data-bs-target="#latest-projects__carousel__caption"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
       ></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="img/latest-projects/abstract-seamless-pattern.jpg"
+          class="d-block w-100"
+          alt="Seamless abstract pattern"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <p>Seamless abstract pattern</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="img/latest-projects/seamless-jellyfish-pattern.jpg"
+          class="d-block w-100"
+          alt="Seamless jellyfish pattern"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <p>Seamless jellyfish pattern</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="img/latest-projects/universe-futuristic-background.jpg"
+          class="d-block w-100"
+          alt="Futuristic universe background"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <p>Futuristic universe background</p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#latest-projects__carousel__caption"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#latest-projects__carousel__caption"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </section>

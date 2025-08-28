@@ -32,6 +32,11 @@ p {
   margin: auto;
 }
 
+.carousel-container {
+  max-width: 1900px;
+  margin: auto;
+}
+
 .w-section {
   padding: 120px 0;
   .w-section__inner {
