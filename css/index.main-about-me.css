@@ -20,6 +20,7 @@
     align-items: center;
     padding: 30px;
     gap: 15px;
+    text-align: center;
 
     .about-me__title {
       text-align: center;
