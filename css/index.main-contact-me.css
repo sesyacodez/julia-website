@@ -2,8 +2,6 @@
   background-color: var(--background-color);
   display: grid;
   gap: 20px;
-  padding-bottom: 60px;
-  padding-top: 60px;
   @media (min-width: 894px) {
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
