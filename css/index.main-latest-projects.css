@@ -34,14 +34,14 @@
   /*BOOTSTRAP CAROUSEL*/
   .carousel-item img {
     width: 1000px; /* force width */
-    height: 600px; /* force height */
+    height: 400px; /* force height */
     object-fit: cover; /* crop nicely instead of squishing */
     margin: 0 auto; /* center horizontally */
   }
 
   @media (min-width: 894px) {
     .carousel-item img {
-      height: 900px;
+      height: 600px;
     }
   }
   #latest-projects__carousel__caption .carousel-caption p {
