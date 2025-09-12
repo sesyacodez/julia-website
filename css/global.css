@@ -7,6 +7,7 @@
   --accent-color: #557d5f;
   --background-color: #f7f7f5;
   --accent-background-color: #e8e8e8;
+  --border-color: rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode {
@@ -15,6 +16,7 @@
   --accent-color: #c09a64;
   --background-color: #101010;
   --accent-background-color: #1c1c1c;
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
 h1,

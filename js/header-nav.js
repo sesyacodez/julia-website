@@ -28,3 +28,28 @@ toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
   updateThemeIcons();
 });
+
+//BURGER MENU
+
+const burger = document.querySelector(".header-nav__burger");
+const navList = document.querySelector(".header-nav__list");
+const navLinks = document.querySelectorAll(".header-nav__list li a");
+
+// Toggle menu when burger is clicked
+burger.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});
+
+// Close menu when a link is clicked
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navList.classList.remove("active");
+  });
+});
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+  // Check if click is NOT inside burger or navList
+  if (!navList.contains(e.target) && !burger.contains(e.target)) {
+    navList.classList.remove("active");
+  }
+});
