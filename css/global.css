@@ -23,7 +23,8 @@ h2 {
 }
 
 h3,
-p {
+p,
+a {
   font-family: "PT Sans", sans-serif;
 }
 
