@@ -46,8 +46,8 @@ function App() {
   return (
     <>
       <Header cartCount={cart.length} onCartClick={() => setIsCartOpen(true)} />
-      <AboutMe />
       <Introduction />
+      <AboutMe />
       <LatestProjects />
       <Catalog addToCart={addToCart} />
       <ContactMe />
