@@ -6,20 +6,21 @@ import AboutMe from "./components/AboutMe";
 import ContactMe from "./components/ContactMe";
 import Introduction from "./components/Introduction";
 import LatestProjects from "./components/LatestProjects";
+import CartModal from "./components/CartModal";
 import "./css/global.css";
-import "./css/global.footer.css"
-import "./css/global.header-nav.css"
-import "./css/index.css"
-import "./css/index.main-about-me.css"
-import "./css/index.main-catalog.css"
-import "./css/index.main-contact-me.css"
-import "./css/index.main-introduction-hero.css"
-import "./css/index.main-latest-projects.css"
-
-
+import "./css/global.footer.css";
+import "./css/global.header-nav.css";
+import "./css/index.css";
+import "./css/index.main-about-me.css";
+import "./css/index.main-catalog.css";
+import "./css/index.main-contact-me.css";
+import "./css/index.main-introduction-hero.css";
+import "./css/index.main-latest-projects.css";
+import "./css/cart-modal.css";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   // Load cart from localStorage on mount
   useEffect(() => {
@@ -40,28 +41,26 @@ function App() {
     setCart((prev) => prev.filter((_, i) => i !== index));
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
     <>
-      <Header />
+      <Header cartCount={cart.length} onCartClick={() => setIsCartOpen(true)} />
       <AboutMe />
       <Introduction />
       <LatestProjects />
       <Catalog addToCart={addToCart} />
-      <div className="cart-summary">
-        <h2>Cart ({cart.length})</h2>
-        {cart.length > 0 && (
-          <ul>
-            {cart.map((item, index) => (
-              <li key={index}>
-                {item.title} - {item.price}{" "}
-                <button onClick={() => removeFromCart(index)}>Remove</button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
       <ContactMe />
       <Footer />
+      <CartModal
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cart={cart}
+        removeFromCart={removeFromCart}
+        clearCart={clearCart}
+      />
     </>
   );
 }
