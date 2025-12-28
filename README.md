@@ -1,29 +1,16 @@
-# HTML Template Repository with HTML Proofer
+# React + Vite
 
-This template repository includes preconfigured GitHub Action that will validate html files in a project with (HTMLProofer)[https://github.com/gjtorikian/html-proofer/].
-And htmx to load partials
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-```html
-<main data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.main.partial.html"></main>
-```
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-```js
-function init() {
-    import('...js');
-}
+## React Compiler
 
-const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;
-let loadedPartialsCount = 0;
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-document.body.addEventListener('htmx:afterOnLoad', () => {
-    loadedPartialsCount++;
-    if (loadedPartialsCount === totalPartials) init();
-});
-```
+## Expanding the ESLint configuration
 
-Add the data-proofer-ignore attribute to any tag to ignore it from every check.
-
-```html
-<a href="https://notareallink" data-proofer-ignore>Not checked.</a>
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
