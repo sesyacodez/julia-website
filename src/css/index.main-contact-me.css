@@ -80,15 +80,45 @@
       font-weight: 700;
       color: var(--heading-color);
       cursor: pointer;
-      padding: 12px 10px; 
+      padding: 12px 10px;
       background-color: var(--background-color);
       border: 1px solid var(--text-color);
+      transition: all 0.3s ease;
     }
 
     .contact-me__button:hover {
       background-color: var(--heading-color);
       border: 1px solid var(--background-color);
       color: var(--background-color);
+    }
+
+    .contact-me__button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .contact-me__status {
+      margin: 0;
+      padding: 10px;
+      font-size: 13px;
+      text-align: center;
+      text-transform: none;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-me__status--success {
+      color: var(--accent-color);
+      background-color: rgba(85, 125, 95, 0.1);
+    }
+
+    .contact-me__status--error {
+      color: #e74c3c;
+      background-color: rgba(231, 76, 60, 0.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
     }
   }
 }

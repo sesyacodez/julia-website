@@ -1,4 +1,55 @@
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 function ContactMe() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState({ type: "", message: "" });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setStatus({ type: "", message: "" });
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(
+        "service_ovwloyi",
+        "template_r77haf6",
+        templateParams,
+        "us3OLJKNunjT-OPnf"
+      );
+
+      setStatus({
+        type: "success",
+        message: "Message sent successfully! I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setStatus({
+        type: "error",
+        message: "Failed to send message. Please try again.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section className="contact-me container" id="contact-me">
       <div className="contact-me__image">
@@ -26,20 +77,46 @@ function ContactMe() {
           LET'S CREATE SOMETHING GREAT TOGETHER!
         </p>
 
-        <form className="contact-me__form" action="submit" method="post">
-          <input type="text" name="client-name" placeholder="Enter your name" />
+        <form className="contact-me__form" onSubmit={handleSubmit}>
           <input
             type="text"
-            name="client-email"
+            name="name"
+            placeholder="Enter your name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
             placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
+            required
           />
-          <input
-            type="text"
-            name="client-message"
+          <textarea
+            name="message"
             placeholder="Enter your message"
+            value={formData.message}
+            onChange={handleChange}
+            rows="4"
+            required
           />
-          <button type="submit" className="contact-me__button">
-            SUBMIT
+
+          {status.message && (
+            <p
+              className={`contact-me__status contact-me__status--${status.type}`}
+            >
+              {status.message}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            className="contact-me__button"
+            disabled={isLoading}
+          >
+            {isLoading ? "SENDING..." : "SUBMIT"}
           </button>
         </form>
       </div>
