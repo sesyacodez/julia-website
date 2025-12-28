@@ -86,23 +86,6 @@ function Header({ cartCount, onCartClick }) {
         </ul>
 
         <div className="header-nav__icons">
-          <ul className="header-nav__socials">
-            <li>
-              <a
-                href="https://www.instagram.com/ju.angelarts"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* Instagram SVG */}
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                {/* TikTok SVG */}
-              </a>
-            </li>
-          </ul>
-
           <button className="header-nav__cart" onClick={onCartClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
