@@ -17,6 +17,7 @@ import "./css/index.main-contact-me.css";
 import "./css/index.main-introduction-hero.css";
 import "./css/index.main-latest-projects.css";
 import "./css/cart-modal.css";
+import "./css/product-modal.css";
 
 function App() {
   const [cart, setCart] = useState(() => {

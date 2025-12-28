@@ -1,0 +1,162 @@
+.product-modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-modal {
+  background-color: var(--background-color);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+.product-modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 5px;
+  z-index: 10;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.product-modal__close:hover {
+  color: var(--accent-color);
+  transform: rotate(90deg);
+}
+
+.product-modal__content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .product-modal__content {
+    flex-direction: row;
+  }
+}
+
+.product-modal__image-container {
+  flex: 1;
+  min-height: 300px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .product-modal__image-container {
+    min-height: auto;
+    max-height: none;
+  }
+}
+
+.product-modal__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-modal__details {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-modal__title {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--heading-color);
+  line-height: 1.5;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-family: "PT Sans", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .product-modal__title {
+    font-size: 20px;
+  }
+}
+
+.product-modal__description {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.8;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+.product-modal__price {
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--accent-color);
+  margin: 0;
+  font-family: "Times New Roman", serif;
+}
+
+.product-modal__add-btn {
+  padding: 15px 30px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: 2px solid var(--accent-color);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Times New Roman", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.product-modal__add-btn:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+.product-modal__add-btn:active {
+  background-color: transparent;
+  color: var(--accent-color);
+}
