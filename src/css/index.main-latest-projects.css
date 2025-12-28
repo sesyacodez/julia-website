@@ -6,22 +6,26 @@
     align-items: center;
     padding: 30px;
     gap: 15px;
+
     .latest-projects__title {
       text-align: center;
       font-size: 40px;
       font-weight: 700;
       color: var(--heading-color);
     }
+
     @media (min-width: 420px) {
-      .introduction__title {
+      .latest-projects__title {
         font-size: 45px;
       }
     }
+
     @media (min-width: 520px) {
-      .introduction__title {
+      .latest-projects__title {
         font-size: 50px;
       }
     }
+
     .latest-projects__subtitle {
       text-align: center;
       font-size: 14px;
@@ -31,24 +35,112 @@
     }
   }
 
-  /*BOOTSTRAP CAROUSEL*/
-  .carousel-item img {
-    width: 1000px; /* force width */
-    height: 400px; /* force height */
-    object-fit: cover; /* crop nicely instead of squishing */
-    margin: 0 auto; /* center horizontally */
+  /* Pure React Carousel */
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Navigation Arrows */
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    padding: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   @media (min-width: 894px) {
     .carousel-item img {
       height: 600px;
     }
-  }
-  #latest-projects__carousel__caption .carousel-caption p {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
-    font-size: 17px;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
   }
 }

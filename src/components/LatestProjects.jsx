@@ -1,4 +1,42 @@
+import { useState } from "react";
+
 function LatestProjects() {
+  const slides = [
+    {
+      src: "img/latest-projects/abstract-seamless-pattern.jpg",
+      alt: "Seamless abstract pattern",
+      caption: "Seamless abstract pattern",
+    },
+    {
+      src: "img/latest-projects/seamless-jellyfish-pattern.jpg",
+      alt: "Seamless jellyfish pattern",
+      caption: "Seamless jellyfish pattern",
+    },
+    {
+      src: "img/latest-projects/universe-futuristic-background.jpg",
+      alt: "Futuristic universe background",
+      caption: "Futuristic universe background",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <section className="latest-projects container" id="latest-projects">
       <div className="latest-projects__text">
@@ -23,88 +61,34 @@ function LatestProjects() {
         </p>
       </div>
 
-      <div id="latest-projects__carousel__caption" className="carousel slide">
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#latest-projects__carousel__caption"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#latest-projects__carousel__caption"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#latest-projects__carousel__caption"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src="img/latest-projects/abstract-seamless-pattern.jpg"
-              className="d-block w-100"
-              alt="Seamless abstract pattern"
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <p>Seamless abstract pattern</p>
-            </div>
-          </div>
-
-          <div className="carousel-item">
-            <img
-              src="img/latest-projects/seamless-jellyfish-pattern.jpg"
-              className="d-block w-100"
-              alt="Seamless jellyfish pattern"
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <p>Seamless jellyfish pattern</p>
-            </div>
-          </div>
-
-          <div className="carousel-item">
-            <img
-              src="img/latest-projects/universe-futuristic-background.jpg"
-              className="d-block w-100"
-              alt="Futuristic universe background"
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <p>Futuristic universe background</p>
-            </div>
-          </div>
-        </div>
-
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#latest-projects__carousel__caption"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
+      <div className="carousel">
+        <button onClick={prevSlide} className="carousel-control-prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true">
+            ‹
+          </span>
           <span className="visually-hidden">Previous</span>
         </button>
 
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#latest-projects__carousel__caption"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
+        <div className="carousel-inner">
+          <div
+            className="carousel-track"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {slides.map((slide, index) => (
+              <div key={index} className="carousel-item">
+                <img src={slide.src} alt={slide.alt} />
+                <div className="carousel-caption">
+                  <p>{slide.caption}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button onClick={nextSlide} className="carousel-control-next">
+          <span className="carousel-control-next-icon" aria-hidden="true">
+            ›
+          </span>
           <span className="visually-hidden">Next</span>
         </button>
       </div>
