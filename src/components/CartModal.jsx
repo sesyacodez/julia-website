@@ -25,6 +25,32 @@ function CartModal({ isOpen, onClose, cart, removeFromCart, clearCart }) {
       .join("\n");
   };
 
+  // HTML version with images for email
+  const formatOrderItemsHTML = () => {
+    return cart
+      .map(
+        (item) => `
+        <tr>
+          <td style="padding: 10px; border-bottom: 1px solid #eee;">
+            <img src="${item.image}" alt="${item.title.substring(
+          0,
+          30
+        )}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
+          </td>
+          <td style="padding: 10px; border-bottom: 1px solid #eee; vertical-align: top;">
+            <p style="margin: 0 0 5px 0; font-weight: bold;">${item.title.substring(
+              0,
+              60
+            )}...</p>
+            <p style="margin: 0; color: #557d5f; font-weight: bold;">${
+              item.price
+            }</p>
+          </td>
+        </tr>`
+      )
+      .join("");
+  };
+
   const handleCheckout = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -38,6 +64,7 @@ function CartModal({ isOpen, onClose, cart, removeFromCart, clearCart }) {
       to_email: email,
       customer_name: name,
       order_items: formatOrderItems(),
+      order_items_html: formatOrderItemsHTML(),
       total_price: totalPrice,
       order_id: orderId,
     };
@@ -47,6 +74,7 @@ function CartModal({ isOpen, onClose, cart, removeFromCart, clearCart }) {
       customer_name: name,
       customer_email: email,
       order_items: formatOrderItems(),
+      order_items_html: formatOrderItemsHTML(),
       total_price: totalPrice,
       order_id: orderId,
     };
