@@ -3,7 +3,7 @@
   display: grid;
   gap: 5px;
   padding-bottom: 60px;
-  padding-top: 60px;
+  padding-top: 120px;
   @media (min-width: 894px) {
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
