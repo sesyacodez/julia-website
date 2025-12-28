@@ -2,8 +2,12 @@
   background-color: var(--background-color);
   display: grid;
   gap: 20px;
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding: 60px 10px;
+
+  @media (min-width: 400px) {
+    padding: 60px 0;
+  }
+
   @media (min-width: 894px) {
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
@@ -18,15 +22,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 20px 15px;
     gap: 15px;
     text-align: center;
 
+    @media (min-width: 400px) {
+      padding: 30px;
+    }
+
     .about-me__title {
       text-align: center;
-      font-size: 40px;
+      font-size: 32px;
       font-weight: 700;
       color: var(--heading-color);
+
+      @media (min-width: 400px) {
+        font-size: 40px;
+      }
     }
 
     .about-me__subtitle {

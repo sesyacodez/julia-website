@@ -15,15 +15,17 @@ function Introduction() {
         <svg
           className="introduction__divider"
           xmlns="http://www.w3.org/2000/svg"
-          width="3000"
-          height="31"
-          style={{ width: "8%" }}
+          viewBox="0 0 100 2"
+          preserveAspectRatio="none"
+          style={{ width: "8%", height: "2px" }}
         >
-          <path
-            d="M0 15.5 L3000 15.5"
+          <line
+            x1="0"
+            y1="1"
+            x2="100"
+            y2="1"
             stroke="var(--text-color)"
             strokeWidth="1"
-            fill="none"
           />
         </svg>
 

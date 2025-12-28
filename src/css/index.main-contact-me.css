@@ -2,6 +2,11 @@
   background-color: var(--background-color);
   display: grid;
   gap: 20px;
+  padding: 0 10px;
+
+  @media (min-width: 400px) {
+    padding: 0;
+  }
 
   @media (min-width: 894px) {
     grid-template-columns: 1fr 1fr;
@@ -18,15 +23,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 20px 15px;
     gap: 15px;
     text-align: center;
 
+    @media (min-width: 400px) {
+      padding: 30px;
+    }
+
     .contact-me__title {
       text-align: center;
-      font-size: 40px;
+      font-size: 32px;
       font-weight: 700;
       color: var(--heading-color);
+
+      @media (min-width: 400px) {
+        font-size: 40px;
+      }
     }
 
     .contact-me__subtitle {

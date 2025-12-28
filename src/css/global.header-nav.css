@@ -146,6 +146,7 @@
   @media (max-width: 893px) {
     .header-nav {
       justify-content: space-between;
+      padding: 5px 10px;
     }
 
     .header-nav__inner .header-nav__socials {
@@ -154,7 +155,7 @@
 
     .header-nav__inner .header-nav__burger {
       display: flex;
-      margin-left: 10px;
+      margin-left: 5px;
     }
 
     .header-nav__inner .header-nav__list {
@@ -209,7 +210,8 @@
     .header-nav__inner .header-nav__icons {
       display: flex;
       align-items: center;
-      margin-right: 10px;
+      gap: 10px;
+      margin-right: 0;
     }
   }
 }

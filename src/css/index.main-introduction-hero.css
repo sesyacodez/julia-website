@@ -32,9 +32,16 @@
 
     .introduction__title {
       text-align: center;
-      font-size: 50px;
+      font-size: 36px;
       font-weight: 700;
       color: var(--heading-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    @media (min-width: 360px) {
+      .introduction__title {
+        font-size: 50px;
+      }
     }
     @media (min-width: 420px) {
       .introduction__title {

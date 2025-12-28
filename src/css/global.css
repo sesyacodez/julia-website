@@ -40,6 +40,7 @@ a {
   margin-right: auto;
   width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .carousel-container {
@@ -52,7 +53,11 @@ a {
   .w-section__inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 10px;
+
+    @media (min-width: 400px) {
+      padding: 0 15px;
+    }
   }
 }
 

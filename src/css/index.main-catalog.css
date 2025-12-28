@@ -1,7 +1,13 @@
 .catalog {
   padding-top: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: 400px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .catalog__titles {
     display: flex;
     flex-direction: column;
@@ -10,9 +16,20 @@
     gap: 10px;
     .catalog__titles-title {
       text-align: center;
-      font-size: 40px;
+      font-size: 28px;
       font-weight: 700;
       color: var(--heading-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+
+      @media (min-width: 400px) {
+        font-size: 36px;
+      }
+
+      @media (min-width: 600px) {
+        font-size: 40px;
+      }
     }
     .catalog__titles-subtitle {
       text-align: center;
