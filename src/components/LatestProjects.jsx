@@ -57,7 +57,7 @@ function LatestProjects() {
         </svg>
 
         <p className="latest-projects__subtitle">
-          MY PASSION IS PHOTOSHOOTS TURNING IDEAS INTO MODERN, TIMELESS ART.
+          MY PASSION IS TURNING IDEAS INTO MODERN, TIMELESS ART.
         </p>
       </div>
 

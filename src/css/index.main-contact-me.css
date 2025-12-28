@@ -2,13 +2,16 @@
   background-color: var(--background-color);
   display: grid;
   gap: 20px;
+
   @media (min-width: 894px) {
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
+
     .contact-me__form {
       margin-bottom: 0px;
     }
   }
+
   .contact-me__text {
     background-color: var(--accent-background-color);
     display: flex;
@@ -45,16 +48,23 @@
     max-width: 400px;
 
     input,
-    textarea {
+    textarea,
+    .contact-me__button {
       width: 100%;
+      box-sizing: border-box;
+      display: block;
+      font-family: inherit;
+      letter-spacing: 1.4px;
+    }
+
+    input,
+    textarea {
       padding: 10px;
       border: none;
       font-size: 14px;
-      font-family: inherit;
+      font-weight: 400;
       color: var(--text-color);
       background-color: var(--background-color);
-      font-weight: 400;
-      letter-spacing: 1.4px;
       text-transform: uppercase;
     }
 
@@ -63,18 +73,18 @@
       color: var(--text-color);
       opacity: 0.7;
     }
+
     .contact-me__button {
       text-align: center;
       font-size: 12px;
       font-weight: 700;
       color: var(--heading-color);
       cursor: pointer;
-      padding: 12px 24px;
+      padding: 12px 10px; 
       background-color: var(--background-color);
       border: 1px solid var(--text-color);
-      padding: 12px 24px;
-      cursor: pointer;
     }
+
     .contact-me__button:hover {
       background-color: var(--heading-color);
       border: 1px solid var(--background-color);

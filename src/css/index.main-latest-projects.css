@@ -39,7 +39,6 @@
   .carousel {
     position: relative;
     width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
   }
 
@@ -93,6 +92,7 @@
     background: none;
     border: none;
     color: #fff;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 60px;
     font-weight: 300;
     cursor: pointer;
