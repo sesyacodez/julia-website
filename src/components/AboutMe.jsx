@@ -2,7 +2,7 @@ function AboutMe() {
   return (
     <section className="about-me container" id="about-me">
       <div className="about-me__image">
-        <img src="img/about-me/about-me__selfie.jpg" alt="JuAngelArts selfie" />
+        <img src={`${import.meta.env.BASE_URL}about-me/about-me__selfie.jpg`} alt="JuAngelArts selfie" />
       </div>
 
       <section className="about-me__text">

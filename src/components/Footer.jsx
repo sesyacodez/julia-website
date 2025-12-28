@@ -5,7 +5,7 @@ function Footer() {
         <a href="#introduction-hero" className="footer__logo-link">
           <img
             className="header-nav__logo"
-            src="img/header/logo.jpg"
+            src={`${import.meta.env.BASE_URL}header/logo.jpg`}
             alt="Julia logo"
           />
         </a>

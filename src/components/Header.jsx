@@ -47,7 +47,7 @@ function Header({ cartCount, onCartClick }) {
           <a href="#introduction-hero">
             <img
               className="header-nav__logo"
-              src="img/header/logo.jpg"
+              src={`${import.meta.env.BASE_URL}header/logo.jpg`}
               alt="Logo"
             />
           </a>

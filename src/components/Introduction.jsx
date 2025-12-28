@@ -45,7 +45,7 @@ function Introduction() {
       <div className="introduction__photo-container">
         <img
           className="introduction__artist_photo"
-          src="img/introduction-hero/artist.jpg"
+          src={`${import.meta.env.BASE_URL}introduction-hero/artist.jpg`}
           alt="JuAngelArts"
         />
       </div>

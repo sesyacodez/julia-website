@@ -3,17 +3,17 @@ import { useState } from "react";
 function LatestProjects() {
   const slides = [
     {
-      src: "img/latest-projects/abstract-seamless-pattern.jpg",
+      src: `${import.meta.env.BASE_URL}latest-projects/abstract-seamless-pattern.jpg`,
       alt: "Seamless abstract pattern",
       caption: "Seamless abstract pattern",
     },
     {
-      src: "img/latest-projects/seamless-jellyfish-pattern.jpg",
+      src: `${import.meta.env.BASE_URL}latest-projects/seamless-jellyfish-pattern.jpg`,
       alt: "Seamless jellyfish pattern",
       caption: "Seamless jellyfish pattern",
     },
     {
-      src: "img/latest-projects/universe-futuristic-background.jpg",
+      src: `${import.meta.env.BASE_URL}latest-projects/universe-futuristic-background.jpg`,
       alt: "Futuristic universe background",
       caption: "Futuristic universe background",
     },

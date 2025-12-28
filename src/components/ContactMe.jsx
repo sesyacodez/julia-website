@@ -53,7 +53,7 @@ function ContactMe() {
   return (
     <section className="contact-me container" id="contact-me">
       <div className="contact-me__image">
-        <img src="img/contact-me/japandi.jpg" alt="Contact visual" />
+        <img src={`${import.meta.env.BASE_URL}contact-me/japandi.jpg`} alt="Contact visual" />
       </div>
 
       <div className="contact-me__text">
