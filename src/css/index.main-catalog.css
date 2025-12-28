@@ -1,10 +1,12 @@
 .catalog {
   padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
   .catalog__titles {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     gap: 10px;
     .catalog__titles-title {
       text-align: center;

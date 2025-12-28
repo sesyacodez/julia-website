@@ -37,7 +37,7 @@ const products = [
 
 function Catalog({ addToCart }) {
   return (
-    <section className="catalog" id="catalog">
+    <section className="catalog container" id="catalog">
       <div className="catalog__titles">
         <h2 className="catalog__titles-title">
           Fresh Angle on Familiar Things
